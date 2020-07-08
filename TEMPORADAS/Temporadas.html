@@ -1,0 +1,166 @@
+<html>
+	
+	<script src = "Recargar.js">
+	</script>
+	
+	<head>
+		<link rel="icon" href="../banners/banner02.png" type="image/png" sizes = "200x150"/>
+		<title>My Hero Academia: Temporadas</title>
+	</head>
+	
+	<body id = "fondo">
+		
+		<div id = "general">
+		
+			<div id = "menu">
+				
+				<ul class="nav">
+				
+					<li id = "Ovas"><a href="../OVAS/Ovas.html"><h1>Ovas</h1></a></li>
+					<li id = "Pelis"><a href="../PELICULAS/Peliculas.html"><h1>Peliculas</h1></a></li>
+					<li id = "Temp"><a href="Temporadas.html"><h1>Temporadas</h1></a></li>
+					<li id = "Inicio"><a href="../index.html"><h1>Inicio</h1></a></li>
+					
+				</ul>
+
+			</div>
+			
+			<br><br><br><br><br>
+			
+			<div align = "center">
+				<a href = "Temporada1.html"><input type = "button" value = "" class = "boton1"></a>
+				<q></q>
+				<a href = "Temporada2.html"><input type = "button" value = "" class = "boton2"></a>
+				<q></q>
+				<a href = "Temporada3.html"><input type = "button" value = "" class = "boton3"></a>
+				<q></q>
+				<a href = "Temporada4.html"><input type = "button" value = "" class = "boton4"></a>
+			</div>
+			
+			<br><br>
+			
+			<div align = "center">
+					
+				<audio controls loop = "loop" preload = "auto">
+					<source src="../audio/Boku No Hero Academia - HERO A.mp3" type = "audio/mpeg">
+				</audio>
+					
+			</div>
+			
+		</div>
+		
+	</body>
+	
+	
+	<style type "text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		
+		body#fondo{
+			width:1366px;
+			height:664px;
+			background-image: url("../banners/fondo.png");
+			background-size: 1366px 664px;
+			background-repeat: no-repeat;
+			background-position:center;
+		}
+		
+		q{
+			visibility:hidden;
+		}
+		
+		.boton1:hover, .boton2:hover, .boton3:hover, .boton4:hover {
+			border:orange 3px solid;
+		}
+		
+		.boton1{
+			background-image:url("../portadas/temp1.jpg");
+			background-repeat:no-repeat;
+			width:312px;
+			height:450px;
+			background-position:center;
+		}
+		
+		.boton2{
+			background-image:url("../portadas/temp2.jpg");
+			background-repeat:no-repeat;
+			width:312px;
+			height:450px;
+			background-position:center;
+		}
+		
+		.boton3{
+			background-image:url("../portadas/temp3.jpg");
+			background-repeat:no-repeat;
+			width:312px;
+			height:450px;
+			background-position:center;
+		}
+		
+		.boton4{
+			background-image:url("../portadas/temp4.jpg");
+			background-repeat:no-repeat;
+			width:306px;
+			height:450px;
+			background-position:center;
+		}
+		
+		div#general{
+			margin:auto;
+			margin-top:auto;
+			width:1366px;
+			height:664px;
+		}
+		
+		div#menu{
+			margin:auto;
+			width:1008px;
+			font-family:Arial;
+		}
+		
+		ul, ol{
+			list-style:none;
+			text-align:center;
+		}
+		
+		.nav > li {
+			float:right;
+			border:white 1px solid;
+		}
+		
+		li#Ovas,li#Pelis,li#Temp,li#Inicio{
+			background-color:gray;
+		}
+		
+		.nav li a {
+			align:center;
+			width:220px;
+			color:black;
+			text-decoration:none;
+			padding: 10px 15px;
+			display:block;
+		}
+		
+		.nav li a:hover {
+			background-color:#434343;
+		}
+		
+		.nav li ul{
+			display:none;
+			position:relative;
+			min-width:100px;
+		}
+		
+		.nav li:hover > ul{
+			display:block;
+		}
+		
+		.nav li ul li {
+			position:relative;
+		}
+		
+	</style>
+		
+</html>
