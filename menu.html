@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 	</head>
 	
-	<body id = "cuerpo">
+	<body id = "cuerpo" onload="nobackbutton();">
 		
 		<div id = "general">
 				
@@ -96,6 +96,16 @@
 		}
 		r.responseType = "blob";
 		r.send();
+	</script>
+	
+	<script>
+		function nobackbutton(){
+   			window.location.hash="no-back-button";
+   			window.location.hash="Again-No-back-button" //chrome
+   			window.onhashchange=function(){
+				window.location.hash="no-back-button";
+			}	
+		}
 	</script>
 	
 	<style>
