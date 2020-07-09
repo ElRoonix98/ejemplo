@@ -1,0 +1,211 @@
+<html>
+	
+	<script>
+		if (window.performance.navigation.type == 1) {
+			location.href = "https://elroonix98.github.io/ejemplo/menu.html";
+		}
+	</script>
+
+	<head>
+		<meta name="viewport" content="width=device-width, hei,user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+		<link rel="icon" href="banners/banner02.png" type="image/png" sizes = "200x150"/>
+		<title>My Hero Academia</title>
+	</head>
+	
+	<body id = "cuerpo" onload="nobackbutton();">
+		
+		<div id = "general">
+				
+			<div id = "menu">
+				
+				<ul class="nav">
+				
+					<li id = "Ovas"><a href="OVAS/Ovas.html"><h1>Ovas</h1></a></li>
+					<li id = "Pelis"><a href="PELICULAS/Peliculas.html"><h1>Peliculas</h1></a></li>
+					<li id = "Temp"><a href="TEMPORADAS/Temporadas.html"><h1>Temporadas</h1></a></li>
+					<li id = "Inicio"><a href=""><h1>Inicio</h1></a></li>
+					
+				</ul>
+				
+			</div>
+			
+			<br><br><br><br>
+			
+			<section class "container" align = "center">
+				
+				<div align = "center">
+					
+					<video width = "815" height = "460" controls id = "MyVid">
+						<source align = "center" src = "Intro/Deku Version_RollingGirl.mp4" type = "video/mp4">
+					</video>
+					
+					<br>
+					
+					<a href = "https://www.paypal.me/ElRoonix" target="_blank"><input type = "button" value = "" class = "boton_donate"></a>
+					
+					<a style = "visibility: hidden">________________________________________</a>
+					
+					<audio controls loop = "loop">
+				
+						<source src="audio/Boku no Hero My Hero Academia - You Can Be A Hero.mp3" type = "audio/mpeg">
+						
+					</audio>
+				
+				</div>
+				
+			</section>
+			
+		</div>
+		
+		<br><br><br><br><br>
+		
+		<h1 id = "foto">
+			
+			<MARQUEE align = "left">	
+					
+					<font color = "white">
+						
+						<h2>
+							
+							<a><font color = "red">&hearts;</font> Agradezco tu visita, disfruta del Anime <font color = "red">&hearts;</font></a>
+							<a style = "visibility: hidden">______________________</a>
+							<a><font color = "red">&hearts;</font> Consejo: Si al entrar en alguna pagina no cargan los archivos, solo recarga la pagina<font color = "red">&hearts;</font></a>
+						</h2>
+					
+					</font>
+				
+			</MARQUEE>
+		
+		</h1>
+		
+		<script>
+			var r = new XMLHttpRequest();
+			r.onload = function() {
+				myVid.src = URL.createObjectURL(r.response);
+				myVid.play();
+			};
+			if (myVid.canPlayType('video/mp4;codecs="avc1.42E01E, mp4a.40.2"')) {
+				r.open("GET", "Intro/Deku Version_RollingGirl.mp4");
+			}
+			else {
+				r.open("GET", "slide.webm");
+			}
+
+			r.responseType = "blob";
+			r.send();
+		</script>
+		
+		<script>
+			function nobackbutton(){
+				window.location.hash="no-back-button";	
+				window.location.hash="Again-No-back-button" //chrome
+				window.onhashchange=function(){window.location.hash="no-back-button";}
+			}
+		</script>
+		
+	</body>
+	
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		
+		h1#foto{
+			height:64px;
+			background-color:brown;
+		}
+		
+		.container{
+			float:center;
+		}
+		
+		.boton_donate{
+			width:190px;
+			height:50px;
+			background: url("Intro/boton-donativo.png");
+			background-repeat:no-repeat;
+			background-size: 190px 50px;
+			background-position:center;
+			cursor:pointer;
+			outline:0;
+			border:0;
+		}
+		
+		body#cuerpo{
+			width:1366px;
+			height:450px;
+			background-color:brown;
+			background-image: url("banners/fondo.png");
+			background-size: 1366px 545px;
+			background-repeat: no-repeat;
+			background-position:center;
+		}
+		
+		div#general{
+			margin:auto;
+			margin-top:auto;
+			width:1366px;
+			height:500px;
+		}
+		
+		div#mp3{
+			float:center;
+			width:275px;
+		}
+		
+		div#menu{
+			margin:auto;
+			width:1050px;
+			font-family:Arial;
+		}
+		
+		ul, ol{
+			list-style:none;
+			text-align:center;
+		}
+		
+		.nav > li {
+			float:right;
+			border:white 1px solid;
+		}
+		
+		li#Ovas,li#Pelis,li#Temp,li#Inicio{
+			background-color:gray;
+		}
+		
+		li#color1, li#color2,li#color3, li#color4, li#color5, li#color6, li#color7, li#color8, li#color9, li#color10{
+			background-color:silver;
+			border:blue 1px solid;
+		}
+		
+		.nav li a {
+			align:center;
+			width:220px;
+			color:black;
+			text-decoration:none;
+			padding: 10px 15px;
+			display:block;
+		}
+		
+		.nav li a:hover {
+			background-color:#434343;
+		}
+		
+		.nav li ul{
+			display:none;
+			position:relative;
+			min-width:100px;
+		}
+		
+		.nav li:hover > ul{
+			display:block;
+		}
+		
+		.nav li ul li {
+			position:relative;
+		}
+		
+	</style>
+		
+</html>
