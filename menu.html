@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>My Hero Academia</title>
+	<meta name = "viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+
+	<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-menu"></span>Menu</a>
+		</div>
+ 
+		<nav>
+			<ul>
+				<li><a href="#"><span class="icon-home3"></span>Inicio</a></li>
+				<li><a href="#"><span class="icon-film"></span>Temporadas</a></li>
+				<li><a href="#"><span class="icon-video-camera"></span>Peliculas</a></li>
+				<li><a href="#"><font color = "white"><span class="icon-star-full"></span>Ovas</font></a></li>
+			</ul>
+		</nav>
+
+		<section align = "center">
+			
+			<br><br>
+
+			<video controls id = "MyVid">
+					<source align = "center" src = "Intro/Deku Version_RollingGirl.mp4" type = "video/mp4">
+			</video>
+
+			<br><br>
+
+			<a href = "https://www.paypal.me/ElRoonix" target="_blank"><input type = "button" value = "" class = "boton_donate"></a>
+			
+			<br><br>
+
+			<audio controls loop = "loop">
+				
+				<source src="audio/Boku no Hero My Hero Academia - You Can Be A Hero.mp3" type = "audio/mpeg">
+						
+			</audio>
+
+		</section>
+
+	</header>
+
+	<script>
+		var r = new XMLHttpRequest();
+		r.onload = function() {
+			myVid.src = URL.createObjectURL(r.response);
+			myVid.play();
+		};
+		if (myVid.canPlayType('video/mp4;codecs="avc1.42E01E, mp4a.40.2"')) {
+			r.open("GET", "Intro/Deku Version_RollingGirl.mp4");
+		}	
+		else {
+			r.open("GET", "slide.webm");
+		}
+		r.responseType = "blob";
+		r.send();
+	</script>
+	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(main);
+ 			var contador = 1;
+			function main(){
+				$('.menu_bar').click(function(){
+				//$('nav').toggle();
+				$('MARQUEE').hide();
+				$('audio').hide("controls");
+				$('.boton_donate').hide();
+ 				if(contador == 1){
+					$('nav').animate({
+						left: '0'
+					});
+					contador = 0;
+					$('video').hide();
+					
+				} else {
+					contador = 1;
+					$('nav').animate({
+						left: '-100%'
+					});
+					$('video').show();
+					$('.boton_donate').show();
+					$('audio').show("controls");
+					$('MARQUEE').show();
+				}
+ 			});
+		};
+
+	</script>
+
+	<br>
+
+	<h2 id = "foto">
+			
+		<MARQUEE align = "left">	
+					
+			<font color = "white">
+						
+				<h2>
+							
+					<a><font color = "red">&hearts;</font> Agradezco tu visita, disfruta del Anime <font color = "red">&hearts;</font></a>
+						<a style = "visibility: hidden">______________________</a>
+						<a><font color = "red">&hearts;</font> Consejo: Si al entrar en alguna pagina no cargan los archivos, solo recarga la pagina<font color = "red">&hearts;</font></a>
+						
+				</h2>
+					
+			</font>
+				
+		</MARQUEE>
+		
+	</h2>
+
+</body>
+
+
+
+<style type="text/css">
+	
+.boton_donate{
+	width:190px;
+	height:50px;
+	background: url("Intro/boton-donativo.png");
+	background-repeat:no-repeat;
+	background-size: 190px 50px;
+	background-position:center;
+	cursor:pointer;
+	outline:0;
+	border:0;
+}
+
+* {
+	margin:0;
+	padding:0;
+}
+ 
+body {
+	background:#024959;
+	background-image: url("fondo1.2.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 80%;
+	background-position: center center;
+	background-attachment: fixed; 
+}
+ 
+video{
+	width: 100%;
+	height: 70%;
+}
+
+header {
+	width:100%;
+}
+ 
+header nav {
+	width:90%;
+	max-width:1000px;
+	margin:20px auto;
+	background:#024959;
+}
+ 
+.menu_bar {
+	display:none;
+}
+ 
+header nav ul {
+	overflow:hidden;
+	list-style:none;
+}
+ 
+header nav ul li {
+	float:left;
+}
+ 
+header nav ul li a {
+	color:#fff;
+	padding:20px;
+	display:block;
+	text-decoration:none;
+}
+ 
+header nav ul li span {
+	margin-right:10px;
+}
+ 
+header nav ul li a:hover {
+	background:#037E8C;
+}
+ 
+section {
+	padding:20px;
+}
+ 
+@media screen and (max-width:800px ) {
+	header nav {
+		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+	}
+ 
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+ 
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+ 
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#024959;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+ 
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
+
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?dty32r');
+  src:  url('fonts/icomoon.eot?dty32r#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dty32r') format('truetype'),
+    url('fonts/icomoon.woff?dty32r') format('woff'),
+    url('fonts/icomoon.svg?dty32r#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-film:before {
+  content: "\e913";
+}
+.icon-video-camera:before {
+  content: "\e914";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+
+</style>
+
+</html>
